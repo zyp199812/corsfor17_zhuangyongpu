@@ -41,18 +41,18 @@
 
 
                 $.ajax({
-                    url: 'http://localhost:3000/profile',
+                    url: 'http://10.30.29.94:80/index.php',
                     type: 'GET',
                     dataType: 'json',
-                    xhrFields:{withCredentials:true},
+                    xhrFields:{withCredentials:false},
                     success: function (res) {
-                        $('#userName').html(res.userName);
+                        $('#userName').html(res);
                     }
                 })
 
                 $('#btnLogout').click(function () {
                     $.ajax({
-                        url: 'http://localhost:3000/logout',
+                        url: 'http://10.30.29.95:63341/logout',
                         type: 'GET',
                         contentType: 'application/json;charset=utf-8',
                         xhrFields:{withCredentials:true},
